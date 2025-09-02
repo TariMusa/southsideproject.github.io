@@ -78,3 +78,55 @@ a:hover{text-decoration:underline}
 /* Footer */
 .site-footer{border-top:1px solid #1c1f26; margin-top:40px; padding:20px 0}
 .footer-inner{display:flex; flex-direction:column; gap:6px; color:var(--muted)}
+
+
+/* ===== Hero image variant ===== */
+.hero--image{
+  position: relative;
+  min-height: 72vh;
+  background-image: url("/southsideproject.github.io/assets/hero.jpg");
+  background-size: cover;
+  background-position: center right;
+  display: grid;
+  align-items: center;
+}
+
+.hero--image .hero-overlay{
+  position:absolute; inset:0;
+  /* dark vignette so white text pops; red tint on the left for brand */
+  background:
+    linear-gradient(90deg, rgba(200,16,46,0.45) 0%, rgba(11,12,16,0.5) 40%, rgba(11,12,16,0.1) 100%),
+    radial-gradient(1200px 600px at 0% 50%, rgba(0,0,0,0.35), rgba(0,0,0,0.65));
+  pointer-events:none;
+}
+
+.hero-inner{ position: relative; }
+.hero-copy{ max-width: 760px; padding: 40px 20px; }
+.hero-title{
+  margin: 0 0 8px 0;
+  line-height: 1.02;
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.hero-sub{
+  color: var(--muted);
+  font-size: clamp(16px, 2.5vw, 20px);
+  margin: 8px 0 18px;
+}
+.hero-ctas{ display:flex; gap:12px; flex-wrap:wrap; }
+
+/* improve legibility on small screens */
+@media (max-width: 820px){
+  .hero--image{ background-position: 60% center; }
+  .hero-copy{ padding: 32px 16px; }
+  .hero-title{ font-size: clamp(28px, 7vw, 46px); }
+}
+
+/* Optional: slightly stronger brand red for buttons */
+.btn-primary{
+  background: linear-gradient(180deg, #C8102E, #a50f2a);
+  color: #fff;
+  border-color: #8f0d24;
+}
+
