@@ -84,7 +84,7 @@ a:hover{text-decoration:underline}
 .hero--image{
   position: relative;
   min-height: 72vh;
-  background-image: url("/southsideproject.github.io/assets/hero.png");
+  background-image: url("/southsideproject.github.io/assets/hero.jpeg");
   background-size: cover;
   background-position: center right;
   display: grid;
