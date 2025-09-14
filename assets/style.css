@@ -1,12 +1,10 @@
-
 /* Minimal, clean styling — no frameworks needed */
 :root{
   --bg:#0b0c10;
   --card:#111216;
   --text:#e6e6e6;
   --muted:#a8a8a8;
-  --brand:#4fd1c5;
-  --brand-ink:#083f3b;
+  --brand:#C8102E;           /* CHANGED: brand red */
   --accent:#a78bfa;
   --maxw:1000px;
   --radius:16px;
@@ -25,7 +23,9 @@ a:hover{text-decoration:underline}
 .site-header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(6px); background:rgba(11,12,16,0.7); border-bottom:1px solid #1c1f26}
 .header-inner{display:flex; align-items:center; justify-content:space-between; height:64px}
 .brand{display:flex; align-items:center; gap:8px; font-weight:700; letter-spacing:.3px}
-.brand .dot{display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--brand)}
+/* remove old green dot */
+.brand .dot{display:none}
+.brand img{display:block; height:56px}   /* NEW: larger logo */
 .nav{display:flex; gap:20px; align-items:center}
 .nav a{color:var(--text)}
 .menu-toggle{display:none; background:none; border:1px solid #2a2c33; color:var(--text); padding:6px 10px; border-radius:8px}
@@ -38,7 +38,11 @@ a:hover{text-decoration:underline}
 /* Buttons */
 .btn{display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid #2a2c33; color:var(--text); background:#151722}
 .btn:hover{transform:translateY(-1px)}
-.btn-primary{background:linear-gradient(180deg, var(--brand), #3bbfb3); color:#062a27; font-weight:700; border-color:#2aa59a}
+.btn-primary{
+  background: linear-gradient(180deg, #C8102E, #a50f2a); /* brand red */
+  color: #fff;
+  border-color: #8f0d24;
+}
 .btn-small{padding:6px 10px; font-size:.9rem}
 
 /* Layout bits */
@@ -79,29 +83,31 @@ a:hover{text-decoration:underline}
 .site-footer{border-top:1px solid #1c1f26; margin-top:40px; padding:20px 0}
 .footer-inner{display:flex; flex-direction:column; gap:6px; color:var(--muted)}
 
-
-/* ===== Hero image variant ===== */
+/* ===== Hero image (right-aligned copy) ===== */
 .hero--image{
   position: relative;
   min-height: 72vh;
-  background-image: url("/southsideproject.github.io/assets/hero.jpeg");
+  background-image: url("assets/hero.jpg?v=3");   /* CHANGED: base-aware path + cache-bust */
   background-size: cover;
-  background-position: center right;
+  background-position: left center;               /* CHANGED: leave right side clean for text */
   display: grid;
   align-items: center;
 }
-
 .hero--image .hero-overlay{
   position:absolute; inset:0;
-  /* dark vignette so white text pops; red tint on the left for brand */
+  /* darker on left → lighter to right so right-aligned text is crisp */
   background:
-    linear-gradient(90deg, rgba(200,16,46,0.45) 0%, rgba(11,12,16,0.5) 40%, rgba(11,12,16,0.1) 100%),
-    radial-gradient(1200px 600px at 0% 50%, rgba(0,0,0,0.35), rgba(0,0,0,0.65));
+    linear-gradient(90deg, rgba(11,12,16,0.75) 0%, rgba(11,12,16,0.55) 40%, rgba(11,12,16,0.15) 80%, rgba(11,12,16,0.05) 100%),
+    radial-gradient(1000px 500px at 10% 50%, rgba(200,16,46,0.25), rgba(0,0,0,0));
   pointer-events:none;
 }
-
 .hero-inner{ position: relative; }
-.hero-copy{ max-width: 760px; padding: 40px 20px; }
+.hero-copy{
+  max-width: 760px;
+  padding: 40px 20px;
+  margin-left:auto;           /* NEW: push copy to the right */
+  text-align:right;           /* NEW: right-align text */
+}
 .hero-title{
   margin: 0 0 8px 0;
   line-height: 1.02;
@@ -114,19 +120,14 @@ a:hover{text-decoration:underline}
   font-size: clamp(16px, 2.5vw, 20px);
   margin: 8px 0 18px;
 }
-.hero-ctas{ display:flex; gap:12px; flex-wrap:wrap; }
+.hero-ctas{ display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end; }
 
 /* improve legibility on small screens */
 @media (max-width: 820px){
-  .hero--image{ background-position: 60% center; }
-  .hero-copy{ padding: 32px 16px; }
+  .hero--image{ background-position: center center; }
+  .hero-copy{ padding: 32px 16px; margin-left:0; text-align:left; }
   .hero-title{ font-size: clamp(28px, 7vw, 46px); }
 }
 
-/* Optional: slightly stronger brand red for buttons */
-.btn-primary{
-  background: linear-gradient(180deg, #C8102E, #a50f2a);
-  color: #fff;
-  border-color: #8f0d24;
-}
-
+/* Icons in product cards */
+.icon { display:block; margin-bottom:12px; color: var(--brand); }
