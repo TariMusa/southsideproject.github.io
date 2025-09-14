@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The SouthSide Project</title>
+  <title>The SouthSide Project — Pioneer Markets. Unlock Insight. Invest Confidently.</title>
   <meta name="description" content="Independent, numbers-first analysis of emerging markets." />
   <base href="/southsideproject.github.io/">
   <link rel="stylesheet" href="assets/style.css?v=3" />
   <link rel="icon" href="assets/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="./">
-      <img src="assets/southside-logo-exact.svg?v=3" alt="The SouthSide Project" height="40" />
+      <img src="assets/southside-logo-exact.svg?v=3" alt="The SouthSide Project" height="56" />
     </a>
     <nav class="nav" id="nav">
       <a href="insights.html">Insights</a>
@@ -24,28 +25,121 @@
     <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
   </div>
 </header>
-<main class="container">
 
-<section class="section">
-  <h1>About</h1>
-  <p><strong>Vision:</strong> Access — unlock African investment. Insight — build a data culture. Voice — amplify African academic perspectives.</p>
-  <p><strong>What we do:</strong> Curate company profiles, topical analysis (ESG & supply chains), and a biweekly newsletter blending clean numbers with academic voices.</p>
-  <p><strong>Independence:</strong> We aim for neutrality, professional standards, transparency, and fairness.</p>
+<main>
 
-  <h2 id="disclaimer">Disclaimer</h2>
-  <p>This content is for informational and educational purposes only and does not constitute investment advice. Do your own research before making investment decisions.</p>
+  <!-- HERO (right-aligned copy over image) -->
+  <section class="hero--image">
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1 class="hero-title">
+          <span>Pioneer Markets.</span><br />
+          <span>Unlock Insight.</span><br />
+          <span>Invest Confidently.</span>
+        </h1>
+        <p class="hero-sub">Independent, numbers-first analysis of emerging markets.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#subscribe">Subscribe — free</a>
+          <a class="btn" href="insights.html">Read the latest</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:hello@southsideproject.com">hello@southsideproject.com</a> (placeholder — replace with your preferred address)</p>
-</section>
+  <!-- WHAT WE OFFER -->
+  <section class="container section">
+    <h2>What We Offer</h2>
+    <div class="cards two-col">
+
+      <!-- Newsletter -->
+      <article class="card">
+        <!-- icon: document/chart -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 3h12l4 4v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path>
+          <path d="M14 3v5h6"></path>
+          <path d="M8 14h8M8 18h8M8 10h4"></path>
+        </svg>
+        <h3>Tap into independent research and analysis</h3>
+        <p>Stay ahead of the curve with our biweekly newsletter. Each edition blends numbers-first insights, contextual charts, and clear explanations of key market movements—no hype, no noise.</p>
+        <a class="btn" href="insights.html">Read the newsletter</a>
+      </article>
+
+      <!-- Curated news -->
+      <article class="card">
+        <!-- icon: headlines/feed -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+          <path d="M7 8h10M7 12h10M7 16h6"></path>
+        </svg>
+        <h3>Stay ahead with market headlines</h3>
+        <p>Cut through the clutter with hand-picked stories from trusted local and regional sources. We highlight the developments investors need to see and link directly to the originals.</p>
+        <a class="btn" href="insights.html#headlines">See curated news</a>
+      </article>
+
+      <!-- Company profiles -->
+      <article class="card">
+        <!-- icon: building/profiles -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 21V7a2 2 0 0 1 2-2h8v18H3z"></path>
+          <path d="M13 23V5h6a2 2 0 0 1 2 2v16h-8z"></path>
+          <path d="M6 9h3M6 13h3M6 17h3"></path>
+        </svg>
+        <h3>Discover your next emerging market investment</h3>
+        <p>Explore concise, comparable snapshots of leading firms. Each profile distills strategy, key metrics, and ESG signals into an easy-to-digest format—so you can evaluate faster.</p>
+        <a class="btn" href="companies.html">Browse profiles</a>
+      </article>
+
+      <!-- Due diligence -->
+      <article class="card">
+        <!-- icon: search/deep dive -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <h3>Get the deep dive you need</h3>
+        <p>When headlines aren’t enough, request tailored research. Our diligence memos combine structured analysis, sourced data, and clear caveats—delivered on demand.</p>
+        <a class="btn" href="about.html#contact">Request diligence</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FEATURED INSIGHT -->
+  <section class="container section">
+    <div class="card">
+      <h3>Featured Insight</h3>
+      <p><strong>Issue #0 — Dangote Cement &amp; ESG signals</strong></p>
+      <p>A pilot edition that distills key metrics into one clear takeaway.</p>
+      <a class="btn" href="posts/issue-0.html">Read Issue #0</a>
+    </div>
+  </section>
+
+  <!-- SUBSCRIBE -->
+  <section id="subscribe" class="container section">
+    <h2>Subscribe</h2>
+    <p>Get The SouthSide Project in your inbox every two weeks.</p>
+    <!-- Replace with Substack/Beehiiv/Mailchimp embed when ready -->
+    <form class="newsletter-form" action="#" method="post" onsubmit="return showSubscribed(event)">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.com" />
+      <button class="btn btn-primary" type="submit">Subscribe</button>
+      <p class="form-hint">Demo form — swap this for your provider’s embed.</p>
+    </form>
+  </section>
 
 </main>
+
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>© 2025 The SouthSide Project · Informational only — not investment advice.</p>
-    <p><a href="/about.html#disclaimer">Disclaimer</a></p>
+    <p>© <span id="yr"></span> The SouthSide Project · Informational only — not investment advice.</p>
+    <p><a href="about.html#disclaimer">Disclaimer</a></p>
   </div>
 </footer>
-<script src="/assets/script.js"></script>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+<script src="assets/script.js?v=3"></script>
 </body>
 </html>
