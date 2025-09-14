@@ -87,7 +87,7 @@ a:hover{text-decoration:underline}
 .hero--image{
   position: relative;
   min-height: 72vh;
-  background-image: url("assets/hero.jpg?v=3");   /* CHANGED: base-aware path + cache-bust */
+  background-image: url("assets/hero.jpeg?v=3");   /* CHANGED: base-aware path + cache-bust */
   background-size: cover;
   background-position: left center;               /* CHANGED: leave right side clean for text */
   display: grid;
